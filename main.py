@@ -8,6 +8,9 @@ connection=psycopg2.connect(
     password=password
 )
 cursor=connection.cursor()
-cursor.execute(SELECT * FROM book;)
-print("hello word")
+cursor.execute("SELECT * FROM book;")
+versions = cursor.fetchall()
+for version in versions:
+    print("Результат запроса", version)
+cursor.close()
 connection.close()
