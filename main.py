@@ -8,5 +8,6 @@ connection=psycopg2.connect(
     password=password
 )
 cursor=connection.cursor()
+cursor.execute(SELECT * FROM book;)
 print("hello word")
 connection.close()
